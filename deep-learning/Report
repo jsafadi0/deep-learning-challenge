@@ -1,0 +1,35 @@
+For this part of the assignment, you’ll write a report on the performance of the deep learning model you created for Alphabet Soup.
+The report should contain the following:
+1- Overview of the analysis: Explain the purpose of this analysis.
+The purposeof this analysis is to create tool for Alphabet Soup, a non-profit foundation, that can predict whether applicants will be successful if funded by the foundation using our knowledge in machine learning and neural networks along with a CSV file that contains more than 34,000 organzations that recieved funding from the foundation.
+
+
+2- Results: Using bulleted lists and images to support your answers, address the following questions:
+Data Preprocessing
+A- What variable(s) are the target(s) for your model?
+"IS_SUCCESSFUL" is the target variable for the model.
+B- What variable(s) are the features for your model?
+All the variables are features for my model EXCEPT "EIN" and "NAME" variables.
+C- What variable(s) should be removed from the input data because they are neither targets nor features?
+Variables "EIN" and "NAME" should be removed from the input data because they are neither targets nor features, and they can be dropped without having an effect on the accuracy of the model.
+
+
+Compiling, Training, and Evaluating the Model
+A- How many neurons, layers, and activation functions did you select for your neural network model, and why?
+In the model, I used a two-layer architecture, 80 neurons in the first hidden layer and 30 neurons in the second hidden layer. I also used the ReLU activation function for both of the layers. I used the above in order to create a model with enough complexity to capture and learn meaningful patterns in our data. Also, I used ReLU to help introducing non-linearity and allowing the model to learn complex relationships between the input and target variables. In the output layer, I used a single neuron and sigmoid activation. The sigmoid activation maps the output between 0 and 1 which represents the positive class's probability.
+
+
+B- Were you able to achieve the target model performance?
+I was able to achieve only 73% which is close to the target model performacne which is 75%.
+
+
+C- What steps did you take in your attempts to increase model performance?
+I took the following 4 steps to increase model performance: 
+1- Increasing the number of neurons and epochs. By increasing neurons, the model becomes more expressive and captures complex patterns in the data which allows for better representation of the relationship between the features and target variable. Also, by increasing the epochs, the model gets opportunities to learn from the data which allow it to refine the predictions and find parameter values, thus it increases accuracy. In this step, it's important to have a balance in increasing epochs to avoid overfitting.
+2- Adding more layers to the model. By doing so, it provides the model with more capacity to capture the relationships between the data. Models with multiple layers can learn hierachical representations of the data and this is can be an advantage to data analysis.
+3- Using different activation function. By doing so, it can has an effect on how the model understands and analyze the inputs. The non-linearity that tahn has may allow for the analysis step to be more accurate.
+4- Using automated optimiser. Automated optimiser explore different combinations of hpyerparameters, such as activation functions, layers number, neurons, and epochs. This exploration may identifies the most optimal combination of hyperparameters which may lead to high accuracy.
+
+
+3- Summary: Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and then explain your recommendation.
+The overall result is generating a model that was able to achieve 73% accuracy.
